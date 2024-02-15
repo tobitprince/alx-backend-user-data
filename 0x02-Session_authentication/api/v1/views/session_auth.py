@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Module of session authenticating views.
-"""
+"""Module of session authenticating views."""
 import os
 from typing import Tuple
 from flask import abort, jsonify, request
@@ -11,7 +10,8 @@ from api.v1.views import app_views
 
 @app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
 def login() -> Tuple[str, int]:
-    """POST /api/v1/auth_session/login
+    """POST /api/v1/auth_session/login.
+
     Return:
       - JSON representation of a User object.
     """
@@ -39,7 +39,8 @@ def login() -> Tuple[str, int]:
 @app_views.route(
     '/auth_session/logout', methods=['DELETE'], strict_slashes=False)
 def logout() -> Tuple[str, int]:
-    """DELETE /api/v1/auth_session/logout
+    """DELETE /api/v1/auth_session/logout.
+
     Return:
       - An empty JSON object.
     """
